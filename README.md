@@ -7,7 +7,7 @@
 Связь с репозиторием на Github
 
 ``` git config user.name "neolex118" ```
-``` git config user.email "gardov1182001@gmail.com" ```
+``` git config user.email "gradov1182001@gmail.com" ```
 ``` git remote add origin https://github.com/neolex118/neolex.git ```
 ``` git branch -M main ```
 ``` git push -u origin main ```
