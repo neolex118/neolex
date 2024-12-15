@@ -1,0 +1,1 @@
+['num__Selling_Price', 'cat__Car_Name', 'cat__Selling_type', 'quantile__Year', 'quantile__Selling_Price', 'quantile__Driven_kms', 'poly__Selling_Price', 'poly__Driven_kms', 'poly__Selling_Price^2', 'poly__Selling_Price Driven_kms', 'spline__Driven_kms_sp_1', 'spline__Driven_kms_sp_2']
