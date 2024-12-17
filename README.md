@@ -101,3 +101,29 @@ mse
 ```
 run_id = 6a4991b0933a4f8699cdcd3053657973
 ```
+
+# Сервис классификации
+
+Описание файлов в папке services:
+
+- api_handler.py включает в себя функции, необходимые для работы модели в FastAPI (загрузка, обработка и т.п.)
+- Dockerfile включает в себя необходимые команды для сборки контейнера с определёнными параметрами
+- main.py содержит основные функции для создания предсказаний
+- requirements.txt содержит необходимые для работы сервиса библиотеки
+- файл get_model.py берёт необходимую модель из mlflow и записывает её в формат pickle
+- model.pkl содержит модель, полученную при помощи get_model.py
+
+Создание образа и запуск контейнера осуществляется по следующим командам:
+```
+docker build . --tag mobile_classifier_model:0
+docker run -p 8001:8000 -v $(pwd)/../models:/models mobile_classifier_model:0
+```
+
+Проверить работоспособность сервиса можно следующей командой:
+```
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/prediction?car_id=1' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{"Car_Name": "ritz", "Year": 2014,"Selling_Price": 3.35,"Driven_kms": 27000,"Fuel_Type": "Petrol","Selling_type": "Dealer","Transmission": "Manual","Owner": 0}'
+```

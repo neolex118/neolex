@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pandas
+pickle4
+scikit-learn
+requests
+prometheus_fastapi_instrumentator
+psycopg2-binary
