@@ -115,8 +115,8 @@ run_id = 6a4991b0933a4f8699cdcd3053657973
 
 Создание образа и запуск контейнера осуществляется по следующим командам:
 ```
-docker build . --tag mobile_classifier_model:0
-docker run -p 8001:8000 -v $(pwd)/../models:/models mobile_classifier_model:0
+docker build . --tag price_model:0
+docker run -p 8001:8000 -v $(pwd)/../models:/models price_model:0
 ```
 
 Проверить работоспособность сервиса можно следующей командой:
