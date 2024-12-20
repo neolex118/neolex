@@ -135,13 +135,13 @@ curl -X 'POST' \
 В рамках тестирования интерфейса были полученные следующие скриншоты:
 
 Гистограмма предсказаний модели
-![prom_hist](/services/prometheus/pic3.png)
+```./services/prometheus/pic3.png```
 
 Частота запросов к основному сервису
-![prom_rate](/services/prometheus/pic1.png)
+```./services/prometheus/pic1.png```
 
 Количество запросов к сервису с кодами ошибок 4** и 5**
-![prom_error](/services/prometheus/pic4.png)
+```./services/prometheus/pic4.png```
 
 
 # Дашборд
@@ -151,7 +151,7 @@ curl -X 'POST' \
 
 Сервис, созданный для визуализации метрик путём создания дашбордов. Полученный в результате создания дашборд хранится в ``` services/grafana ```. Веб-интерфейс запускается по адресу ``` http://localhost:3000 ```. В качестве database используется сервис prometheus.
 
-![Grafana Dashboard](/services/grafana/pic1.png)
+```./services/grafana/pic1.png```
 
 Описание метрик, полученных на дашборде выше:
 
